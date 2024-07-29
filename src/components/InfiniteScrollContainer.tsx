@@ -20,7 +20,7 @@ export default function InfiniteScrollContainer({
   });
 
   return (
-    <div>
+    <div className={className}>
       {children}
       <div ref={ref} />
     </div>
