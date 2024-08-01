@@ -9,6 +9,7 @@ import Link from "next/link";
 import Linkify from "../Linkify";
 import UserAvatar from "../UserAvatar";
 import UserTooltip from "../UserTooltip";
+import BookmarkButton from "./BookmarkButton";
 import LikeButton from "./LikeButton";
 import PostMoreButton from "./PostMoreButton";
 
@@ -64,15 +65,26 @@ export default function Post({ post }: PostProps) {
 
       <hr className="text-muted-foreground" />
 
-      <LikeButton
-        postId={post.id}
-        initialState={{
-          likes: post._count.likes,
-          isLikedByUser: post.likes.some((like) => {
-            return like.userId === user.id;
-          }),
-        }}
-      />
+      <div className="flex justify-between gap-5">
+        <LikeButton
+          postId={post.id}
+          initialState={{
+            likes: post._count.likes,
+            isLikedByUser: post.likes.some((like) => {
+              return like.userId === user.id;
+            }),
+          }}
+        />
+
+        <BookmarkButton
+          postId={post.id}
+          initialState={{
+            isBookmarkedByUser: post.bookmarks.some((bookmark) => {
+              return bookmark.userId === user.id;
+            }),
+          }}
+        />
+      </div>
     </article>
   );
 }
