@@ -26,13 +26,11 @@ function LinkifyUsername({ children }: LinkifyProps) {
   return (
     <LinkIt
       regex={/(@[a-zA-Z0-9_-]+)/}
-      component={(match, key) => {
-        return (
-          <UserLinkWithTooltip key={key} username={match.slice(1)}>
-            {match}
-          </UserLinkWithTooltip>
-        );
-      }}
+      component={(match, key) => (
+        <UserLinkWithTooltip key={key} username={match.slice(1)}>
+          {match}
+        </UserLinkWithTooltip>
+      )}
     >
       {children}
     </LinkIt>
