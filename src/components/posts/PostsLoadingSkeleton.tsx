@@ -2,7 +2,7 @@ import { Skeleton } from "../ui/skeleton";
 
 export default function PostsLoadingSkeleton() {
   return (
-    <div>
+    <div className="space-y-5">
       <PostLoadingSkeleton />
       <PostLoadingSkeleton />
       <PostLoadingSkeleton />
@@ -17,7 +17,7 @@ function PostLoadingSkeleton() {
         <Skeleton className="size-12 rounded-full" />
         <div className="space-y-1.5">
           <Skeleton className="h-4 w-24 rounded" />
-          <Skeleton className="h-4 w-24 rounded" />
+          <Skeleton className="h-4 w-20 rounded" />
         </div>
       </div>
       <Skeleton className="h-16 rounded" />
