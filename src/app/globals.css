@@ -117,3 +117,7 @@
 .str-chat__channel-search-bar-button--exit-search {
   display: none;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

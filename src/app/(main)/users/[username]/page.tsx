@@ -36,7 +36,7 @@ const getUser = cache(async (username: string, loggedInUserId: string) => {
   return user;
 });
 
-export async function generateMetaData({
+export async function generateMetadata({
   params: { username },
 }: PageProps): Promise<Metadata> {
   const { user: loggedInUser } = await validateRequest();
