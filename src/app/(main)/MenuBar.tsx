@@ -2,7 +2,7 @@ import { validateRequest } from "@/auth";
 import { Button } from "@/components/ui/button";
 import prisma from "@/lib/prisma";
 import streamServerClient from "@/lib/stream";
-import { Home, Mail } from "lucide-react";
+import { Bookmark, Home } from "lucide-react";
 import Link from "next/link";
 import NotificationsButton from "./NotificationsButton";
 import MessagesButton from "./messages/MessagesButton";
@@ -55,7 +55,7 @@ export default async function MenuBar({ className }: MenuBarProps) {
         asChild
       >
         <Link href="/bookmarks">
-          <Mail />
+          <Bookmark />
           <span className="hidden lg:inline">Bookmarks</span>
         </Link>
       </Button>
